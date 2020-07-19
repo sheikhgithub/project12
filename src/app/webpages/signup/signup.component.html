@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- add icon link -->
+ <link rel = "icon" href =  
+ "https://www.logomaker.com/wp-content/uploads/2019/02/iStock-921437050-800x358.jpg" 
+         type = "image/x-icon"> 
+</head>
+ <body>
+<div class="box centered">
+<h3 class="top">Sign Up Here</h3>
+        <div class="row">
+          Username : <input type="text" [(ngModel)]="username" placeholder="Username">
+        </div>
+        <div class="row">
+          Password : <input type="password" [(ngModel)]="pass" placeholder="Password">
+        </div>
+        <div class="row">
+          Confirm Password : <input type="password" [(ngModel)]="conpass" placeholder="Confirm Password">
+        </div>
+        <div class="btn-row row">
+          <button (click)="signup()">SIGN UP</button>
+          <button (click)="reset()" class="reset">RESET</button>
+        </div>
+        <div>
+          <h3>Have an Account Already?</h3>
+          <a class="link" (click)="goto()"> Log In Here</a>
+        </div>
+        <div class="error" *ngIf="flag">
+          <a>{{msg}}</a>
+        </div>
+      </div>
+      <!-- <div class="error" *ngIf="flag">
+        <a>{{msg}}</a>
+      </div> -->
+      </body>
+      </html>
